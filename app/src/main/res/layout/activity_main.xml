@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bac3"
+    tools:context=".MainActivity"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/location"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="Jaipur"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILCity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+
+                android:background="@android:color/transparent"
+                android:hint="Enter city name"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@android:color/transparent"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enterCity"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/ibButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingRight="19dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_search"
+                />
+
+        </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="230dp"
+                    android:layout_height="160dp"
+                    android:padding="7dp"
+                    android:text="Temp"
+                    android:textColor="@color/white"
+                    android:textSize="80sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="150dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/max_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:paddingBottom="15dp"
+                        android:text="max: temp"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/min_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="9dp"
+                        android:paddingBottom="15dp"
+                        android:text="min: temp"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+
+
+                    <TextView
+                        android:id="@+id/weather"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                       android:paddingStart="20dp"
+                        android:layout_below="@+id/back"
+                        android:text="weather"
+                       android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="55dp"
+                    android:paddingEnd="9dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="120dp"
+                        android:layout_height="210dp"
+                        android:layout_marginLeft="10dp"
+
+                        app:cardCornerRadius="20dp"
+                        android:background="@color/gray"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="#eda3da"
+                            android:paddingLeft="5dp"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Pressure"
+                                android:paddingTop="30dp"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:text="Wind "
+                                android:paddingTop="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="42sp"
+                                android:textStyle="bold"
+                                android:visibility="invisible"/>
+                            <TextView
+                                android:id="@+id/pressure"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+
+                                android:text="1000"
+                                android:textColor="@color/white"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="120dp"
+                        android:layout_height="210dp"
+                        android:layout_marginLeft="10dp"
+                        app:cardBackgroundColor="#00000000"
+                        app:cardCornerRadius="20dp"
+                        android:background="@color/gray"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="#eda3da">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Humidity"
+                                android:paddingTop="30dp"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:text="Wind "
+                                android:paddingTop="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="42sp"
+                                android:textStyle="bold"
+                                android:visibility="invisible"/>
+
+                            <TextView
+                                android:id="@+id/humidity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+
+                                android:text="24"
+                                android:textColor="@color/white"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="120dp"
+                        android:layout_height="210dp"
+                        app:cardBackgroundColor="#00000000"
+                        android:layout_marginLeft="10dp"
+                        app:cardCornerRadius="20dp"
+                        android:background="@color/gray"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="#eda3da"
+                            >
+
+                            <TextView
+                                android:id="@+id/wind_speed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:text="Wind "
+                                android:layout_marginTop="20dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:text="Wind "
+                                android:paddingTop="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="42sp"
+                                android:textStyle="bold"
+                                android:visibility="invisible"/>
+
+                            <TextView
+                                android:id="@+id/wind"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+
+                                android:text="Speed"
+                                android:textColor="@color/white"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
